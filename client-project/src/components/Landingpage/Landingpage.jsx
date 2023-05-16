@@ -1,8 +1,24 @@
-import React from 'react'
+import React from 'react';
+import "./Landingpage.scss";
+import Head from "./next/head"
+import Filter from "../Filter/Filter";
+import Card from "../Card/Card";
+import Nav from "../Nav/Nav";
 
-const Landingpage = () => {
+const Landingpage = (props) => {
+  const {productInfo } = props 
   return (
-    <div>Landingpage</div>
+    <div className='layout'>
+      <Head>
+        <title> Cactus Tech </title>
+      </Head>
+      <header>
+        <Nav/>
+      </header>
+      <main className='container'>
+        <Card/>
+      </main>
+    </div>
   )
 }
 
