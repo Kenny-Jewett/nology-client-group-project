@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({ image, company, product, productType, description, price, quantity }) => {
   return (
     <div>
-      <img src={image} alt="" />
+      <img src={image} alt={product} />
       <h2>Test Header</h2>
       <section>
         <h3>{company}</h3>
