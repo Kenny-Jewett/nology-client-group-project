@@ -55,9 +55,9 @@ const Carddetails = () => {
     )
 
   return (
-    <div className="container text-center">
-		<div className='row gap-3'>			
-		{productList}			
+    <div className='container text-center'>
+		<div className='row'>			
+			{productList}			
 		</div>
 	</div>  
     
