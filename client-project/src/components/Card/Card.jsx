@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = ({ image, company, product, productType, description, price, quantity }) => {
   return (
-    <div className='col'>
+    <div className='col-lg-4'>
       <div className='card'>
         <img src={image} alt={product} className="card-img-top" />      
         <section className='card-body'>
