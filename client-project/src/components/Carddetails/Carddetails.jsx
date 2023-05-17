@@ -4,22 +4,40 @@ import Card from '../Card/Card.jsx'
 const Carddetails = () => {
 
   const productData = [{
-	image : "image",
-    companyName : "companyName",
-    productName : "productName",
-    productType : "productType",
-    description : "description",
-    price : "price",
-    quantity : "quantity"    
+		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
+    	companyName : "companyName",
+    	productName : "productName",
+    	productType : "productType",
+    	description : "description",
+    	price : "price",
+    	quantity : "quantity"    
     },
 	{
-	image : "image2",
-	companyName : "companyName2",
-	productName : "productName2",
-	productType : "productType2",
-	description : "description2",
-	price : "price2",
-	quantity : "quantity2"	
+		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
+		companyName : "companyName2",
+		productName : "productName2",
+		productType : "productType2",
+		description : "description2",
+		price : "price2",
+		quantity : "quantity2"	
+	},
+	{
+		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
+		companyName : "companyName2",
+		productName : "productName2",
+		productType : "productType2",
+		description : "description2",
+		price : "price2",
+		quantity : "quantity2"	
+	},
+	{
+		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
+		companyName : "companyName2",
+		productName : "productName2",
+		productType : "productType2",
+		description : "description2",
+		price : "price2",
+		quantity : "quantity2"	
 	}]
 
     const productList = productData?.map((product, id) =>
@@ -37,8 +55,10 @@ const Carddetails = () => {
     )
 
   return (
-    <div>
-		{productList}
+    <div className="container text-center">
+		<div className='row'>			
+		{productList}			
+		</div>
 	</div>  
     
   )
