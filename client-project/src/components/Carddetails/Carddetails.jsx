@@ -14,30 +14,30 @@ const Carddetails = () => {
     },
 	{
 		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName2",
-		productName : "productName2",
-		productType : "productType2",
-		description : "description2",
-		price : "price2",
-		quantity : "quantity2"	
+		companyName : "companyName",
+		productName : "productName",
+		productType : "productType",
+		description : "description",
+		price : "price",
+		quantity : "quantity"	
 	},
 	{
 		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName2",
-		productName : "productName2",
-		productType : "productType2",
-		description : "description2",
-		price : "price2",
-		quantity : "quantity2"	
+		companyName : "companyName",
+		productName : "productName",
+		productType : "productType",
+		description : "description",
+		price : "price",
+		quantity : "quantity"	
 	},
 	{
 		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName2",
-		productName : "productName2",
-		productType : "productType2",
-		description : "description2",
-		price : "price2",
-		quantity : "quantity2"	
+		companyName : "companyName",
+		productName : "productName",
+		productType : "productType",
+		description : "description",
+		price : "price",
+		quantity : "quantity"	
 	}]
 
     const productList = productData?.map((product, id) =>
@@ -56,7 +56,7 @@ const Carddetails = () => {
 
   return (
     <div className="container text-center">
-		<div className='row'>			
+		<div className='row gap-3'>			
 		{productList}			
 		</div>
 	</div>  
