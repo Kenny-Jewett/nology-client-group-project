@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react'
+import './App.css'
+import Landingpage from './components/Landingpage/Landingpage'
 
-function App() {
+const App = () => {
   return (
-    <h1>Test</h1>
-  );
+    <Landingpage/>
+  )
 }
 
-export default App;
+export default App
