@@ -1,0 +1,17 @@
+.section{
+   padding-top: 40px;
+   padding-bottom: 40px; 
+}
+
+.main-heading{
+    color:#2E6021;
+    font-size: 26px;
+}
+
+.underline{
+    height: 04px;
+    width: 4rem;
+    background-color: #5C755E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
