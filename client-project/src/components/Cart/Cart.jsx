@@ -22,7 +22,6 @@ const Cart = ({open,closeModal}) => {
                <button className='close btn btn-light' data-dismiss="modal" onClick={closeButton}> &times;</button>
           </div>
           <div className='d-flex p-2 border'>
-          
              <p className='col-sm-10 fw-bold'>Product</p>
              <p className='col-sm-2 fw-bold'>Price </p>
              <hr></hr>
@@ -42,7 +41,6 @@ const Cart = ({open,closeModal}) => {
           
         </div>
         <button className='btn btn-secondary btn-sm'>Checkout</button>
-        
         </div>
       </div>
 
