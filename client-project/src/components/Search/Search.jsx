@@ -1,9 +1,14 @@
 import React from 'react'
+import "./Search.scss"
 
-const Search = () => {
+const Search = ({ handleSearch }) => {
   return (
-    <div>Search</div>
+    <div class="container d-flex flex-row-reverse">
+      <form className="search">
+        <input type="text" placeholder="Search Our Products" onInput={handleSearch} />
+      </form>
+    </div>
   )
 }
 
-export default Search
+export default Search;

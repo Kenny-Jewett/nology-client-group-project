@@ -1,0 +1,22 @@
+.search {
+  margin-top: 5px;
+  padding: 0;
+  display: flex-end;
+  position: relative;
+
+  input {
+    background-color: whitesmoke;
+    border-color: #469daf;
+    width: 300px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}

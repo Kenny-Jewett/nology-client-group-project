@@ -1,6 +1,7 @@
 .navbar-toggler {
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  margin-top: 0px;
+  margin-left: 5px;
   position: relative;
   transition: 0.5s ease-in-out;
 }
@@ -20,24 +21,19 @@
 }
 
 .toggler-icon {
-  display: block;
+  display: flex;
   position: absolute;
   height: 3px;
   width: 95%;
   background: #469daf;
   border-radius: 1px;
   opacity: 1;
-  left: 0%;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
 }
 
-.middle-bar {
-  margin-top: 0px;
-}
-
 .navbar-toggler .top-bar {
-  margin-top: 0px;
+  margin-top: 20px;
   transform: rotate(135deg);
 }
 
@@ -47,12 +43,12 @@
 }
 
 .navbar-toggler .bottom-bar {
-  margin-top: 0px;
+  margin-top: 20px;
   transform: rotate(-135deg);
 }
 
 .navbar-toggler.collapsed .top-bar {
-  margin-top: -20px;
+  margin-top: -24px;
   transform: rotate(0deg);
 }
 
@@ -62,10 +58,11 @@
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  margin-top: 20px;
+  margin-top: 22px;
   transform: rotate(0deg);
 }
 
-.container {
-  justify-content: flex-start;
-}/*# sourceMappingURL=Nav.css.map */
+.nav-link {
+  margin-top: 15px;
+  margin-left: 15px;
+}
