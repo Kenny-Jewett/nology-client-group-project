@@ -3,8 +3,8 @@ import "./Search.scss"
 
 const Search = ({ handleSearch }) => {
   return (
-    <div class="container d-flex flex-row-reverse">
-      <form className="search">
+    <div>
+      <form class="search">
         <input type="text" placeholder="Search Our Products" onInput={handleSearch} />
       </form>
     </div>

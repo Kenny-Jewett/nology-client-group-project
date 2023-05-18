@@ -4,7 +4,7 @@ import "./Hamburger.scss";
 const Hamburger = () => {
   return (
     <>
-      <button class="navbar-toggler collapsed d-flex flex-column justify-content-around"
+      <button class="navbar-toggler collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
@@ -17,8 +17,8 @@ const Hamburger = () => {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          {/* <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          {/* <li class="nav-item"> */}
+          {/* <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li> */}
           <li class="nav-item">
             <a class="nav-link" href="#">Laptops</a>

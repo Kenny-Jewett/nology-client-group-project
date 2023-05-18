@@ -1,8 +1,6 @@
 .search {
-  margin-top: 5px;
-  padding: 0;
-  display: flex-end;
-  position: relative;
+  //   margin-top: 0px;
+  //   padding: 0;
 
   input {
     background-color: whitesmoke;
@@ -11,12 +9,6 @@
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    justify-content: center;
     border-radius: 5px;
   }
-}
-
-.container {
-  margin: 0;
-  padding: 0;
 }
