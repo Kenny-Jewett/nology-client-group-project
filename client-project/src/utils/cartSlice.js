@@ -33,18 +33,24 @@ const cartSlice = createSlice({
         }]
     },
     reducers:{
-        addItem:(state,action) =>{
+        addOrder:(state,action) =>{
             state.items.push(action.payload)
         },
-        removeItem:(state,action) =>{
-         const currentItems =  state.items.filter((item)=>{
-             return item.id != action.payload.id
-    } 
-        );
-        }
+         removeOrder:(state,action) =>{
+          const filteredItems = state.items.filter((item)=>item.productId !== action.payload
+        ); 
+            
+            state.items = filteredItems;
+        } 
+       /*  removeOrder:(state,action) =>{
+            return{
+                
+                items:[...state.items.filter(item => item.productId != action.payload.productId)]
+            }
+        } */
     }
 });
 
-export const{addItem,removeItem} = cartSlice.actions;
+export const{addOrder,removeOrder} = cartSlice.actions;
 
 export default cartSlice.reducer;

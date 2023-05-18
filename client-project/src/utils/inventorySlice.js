@@ -10,6 +10,7 @@ const inventorySlice = createSlice({
             price:'$1782',
             imgUrl:'https://images.pexels.com/photos/18105/pexels-photo.jpg',
             productType:'laptop',
+            availability:3,
             description:`Meet the 6th generation of the ThinkPad X1 Yoga, a 35.5cms (14) 2-in-1 touchscreen laptop that’s been reimagined to enhance your experience.
             You’ll still find the details you’ve enjoyed on our premium X1 Yoga, and you’ll discover an impressive 16:10 display, a wider TouchPad, a larger battery for more time unplugged, and a new Storm Gray color with tone-matched keyboard.Plus, with the Intel® Evo® platform, you get a super-responsive device that’s ready whenever you need it.Lenovo’s CO2 Offset Services - Get the PC you want without compromising your environmental goals. Lenovo will cover the cost of your CO2 Offset services on PC purchases to help offset your emissions`
         },
@@ -20,6 +21,7 @@ const inventorySlice = createSlice({
             price:'$1349.99',
             imgUrl:'https://images.pexels.com/photos/7974/pexels-photo.jpg',
             productType:'laptop',
+            availability:2,
             description:`Performance:
             From all night rabbit holes to hobbies to intensive DIY projects, explore your world at the speed of thought. This processor can keep up with your curiosity.            
             Thin, Light, Premium Design
@@ -41,6 +43,7 @@ const inventorySlice = createSlice({
             price:'$949.99',
             imgUrl:'https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg',
             productType:'laptop',
+            availability:3,
             description:`Windows 11
             Windows 11 has all the power and security of Windows 10 with a redesigned and refreshed look. It also comes with new tools, sounds, and apps. Every detail has been considered. All of it comes together to bring you a refreshing experience on your PC
             

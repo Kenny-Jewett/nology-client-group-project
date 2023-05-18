@@ -11,8 +11,7 @@ const Cart = ({open,closeModal}) => {
 
   return (
     <div>
-    <button className='btn btn-primary float-right mr-2' data-toggle = "modal"
-    data-target='#cartModal'>Cart</button>
+    
     
     <div className={open ? 'md-show' : 'modal'}>
     
@@ -29,15 +28,21 @@ const Cart = ({open,closeModal}) => {
              <hr></hr>
           </div>
           {cartList.map((obj)=>(
-            <CartItem productName= {obj.productName} imgUrl = {obj.imgUrl} price = {obj.price} key={obj.productId } itemQuantity={obj.itemQuantity}/>
+            <CartItem productName= {obj.productName} 
+            imgUrl = {obj.imgUrl} 
+            price = {obj.price}
+            key={obj.productId} 
+            itemQuantity={obj.itemQuantity}
+            productId = {obj.productId}/>
             
           ))}
-          <div className='d-flex p-2border'>
+        <div className='d-flex p-2 border'>
+          <p className='col-sm-10'>Subtotal</p>
+          <p className='col-sm-2'>Price </p>
           
-          <p className='col-sm-9'>Subtotal</p>
-          <p className='col-sm-3'>Price </p>
-          <hr></hr>
-       </div>
+        </div>
+        <button className='btn btn-secondary btn-sm'>Checkout</button>
+        
         </div>
       </div>
 
