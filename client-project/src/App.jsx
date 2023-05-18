@@ -1,11 +1,18 @@
-import React from 'react'
-import './App.css'
-import Landingpage from './components/Landingpage/Landingpage'
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import Landingpage from './components/Landingpage/Landingpage.jsx';
+import Nav from "./components/Nav/Nav";
+import Cart from "./components/Cart/Cart";
 
-const App = () => {
+function App() {
   return (
-    <Landingpage />
-  )
+    <Provider store={store}>
+      <Nav />
+      <Landingpage />
+      <Cart />
+    </Provider>
+  );
 }
 
 export default App
