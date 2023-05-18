@@ -10,22 +10,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Landingpage = () => {
   // const inventoryList = useSelector(store => store.inventory.items);
   return (
-      <div>
-         <img src={banner} alt="store banner" className = "d-block w-100 fluid" />
-          <section className='section'>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12 text-center">
-                  <h3 className='main-heading'>Best Seller Products</h3>
-                  <div className="underline mx-auto"></div>
-                </div>
-                <Filter/>
-              </div>
-              <Carddetails />
+    <div>
+      <img src={banner} alt="store banner" className="d-block w-100 fluid" />
+      <section className='section'>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h3 className='main-heading'>Best Seller Products</h3>
+              <div className="underline mx-auto"></div>
             </div>
-          </section>
-      </div>
-    );
+            <Filter />
+          </div>
+          <Carddetails />
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default Landingpage
