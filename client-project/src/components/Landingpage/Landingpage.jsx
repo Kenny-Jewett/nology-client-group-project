@@ -6,9 +6,7 @@ const Landingpage = () => {
   const inventoryList = useSelector(store => store.inventory.items);
 
   return (
-    <div>{inventoryList.map((obj)=>(
-       <h1>{obj.productName}</h1>
-    ))}</div>
+    <div></div>
   )
 }
 
