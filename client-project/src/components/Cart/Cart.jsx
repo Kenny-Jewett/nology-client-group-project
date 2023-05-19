@@ -2,7 +2,9 @@ import React from 'react'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div class="row justify-content-around">
+      <a href=""><box-icon name="cart-alt"></box-icon></a>
+    </div>
   )
 }
 
