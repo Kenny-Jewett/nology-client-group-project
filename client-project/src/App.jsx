@@ -1,18 +1,29 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import Nav from "./components/Nav/Nav";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 import Landingpage from './components/Landingpage/Landingpage.jsx';
-import Nav from "./components/Nav/Nav";
 import Cart from "./components/Cart/Cart";
 
-function App() {
+
+const App = () => {
+  const [filterBySearch, setFilterBySearch] = useState(false);
+
+  useEffect(() => {
+  }, [filterBySearch]);
+
+  const handleSearch = (e) => {
+    setFilterBySearch(e.target.value.toLowerCase());
+  };
+
   return (
     <Provider store={store}>
-      <Nav />
+      <Nav handleSearch={handleSearch} />
       <Landingpage />
       <Cart />
     </Provider>
   );
-}
+};
 
 export default App

@@ -1,20 +1,46 @@
-import React, { useState } from 'react'
-import Cart from '../Cart/Cart'
-const Nav = () => {
-  const[open,setOpen] = useState(false)
-  const showModal = () =>{
-    setOpen(true);
-  }
+import React from 'react'
+import Hamburger from "../Hamburger/Hamburger";
+import Search from '../Search/Search';
+import Cart from '../Cart/Cart';
+import "boxicons";
 
-  const closeModal = () =>{
-    setOpen(false);
-  }
+
+const Nav = ({ handleSearch }) => {
   return (
-    <div>
-      <button className='btn btn-secondary' onClick={showModal}>Cart</button>
-      <Cart open={open} closeModal={closeModal}/>
-    </div>
+    <>
+      <nav class="navbar navbar-light bg-light">
+        <div className="container table-row">
+          <div class="col-lg">
+            <Hamburger />
+          </div>
+          <div class="col-lg">
+            <a class="navbar-brand" href="#">Logo</a>
+          </div>
+          <div class="col-lg">
+            <Search handleSearch={handleSearch} />
+          </div>
+          <div class="row justify-content-around">
+            <a href=""><box-icon name="cart-alt"></box-icon></a>
+          </div>
+        </div>
+      </nav >
+    </>
+
+    // const Nav = () => {
+    //   const[open,setOpen] = useState(false)
+    //   const showModal = () =>{
+    //     setOpen(true);
+    //   }
+
+    //   const closeModal = () =>{
+    //     setOpen(false);
+    //   }
+    //   return (
+    //     <div>
+    //       <button className='btn btn-secondary' onClick={showModal}>Cart</button>
+    //       <Cart open={open} closeModal={closeModal}/>
+    //     </div>
   )
 }
 
-export default Nav
+export default Nav;
