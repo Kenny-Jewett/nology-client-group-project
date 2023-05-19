@@ -16,7 +16,7 @@ const Nav = ({ handleSearch }) => {
           <div class="col-lg">
             <a class="navbar-brand" href="#">Logo</a>
           </div>
-          <div class="col-lg">
+          <div class="form-inline my-2 my-lg-0">
             <Search handleSearch={handleSearch} />
           </div>
           <div class="row justify-content-around">
