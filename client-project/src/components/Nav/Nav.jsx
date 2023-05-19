@@ -9,17 +9,17 @@ const Nav = ({ handleSearch }) => {
   return (
     <>
       <nav class="navbar navbar-light bg-light">
-        <div className="container">
-          <div class="row inline-flex">
+        <div className="container table-row">
+          <div class="col-lg">
             <Hamburger />
           </div>
-          <div class="inline-flex">
+          <div class="col-lg">
             <a class="navbar-brand" href="#">Logo</a>
           </div>
-          <div class="row justify-content-end">
+          <div class="col-lg">
             <Search handleSearch={handleSearch} />
           </div>
-          <div class="row justify-content-end">
+          <div class="col-lg">
             <Cart />
           </div>
         </div>
