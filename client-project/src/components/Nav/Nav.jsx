@@ -7,24 +7,27 @@ import "boxicons";
 
 const Nav = ({ handleSearch }) => {
   return (
-    <>
-      <nav class="navbar navbar-light bg-light">
-        <div className="container table-row">
-          <div class="col-lg">
-            <Hamburger />
-          </div>
-          <div class="col-lg">
+    <div class="container-fluid">
+      <nav class="navbar navbar-light bg-white">
+        <div className="d-inline-flex p-2 flex-row">
+          <div class="d-inline-flex p-2 align-self-start">
             <a class="navbar-brand" href="#">Logo</a>
           </div>
-          <div class="col-lg">
+          <div class="p-2 text-start">
+            <Hamburger />
+          </div>
+
+        </div>
+        <div className="d-inline-flex p-2 flex-row">
+          <div class="d-inline-flex p-2 flex-row">
             <Search handleSearch={handleSearch} />
           </div>
-          <div class="row justify-content-around">
+          <div class="d-inline-flex p-2 flex-row align-self-end">
             <a href=""><box-icon name="cart-alt"></box-icon></a>
           </div>
         </div>
       </nav >
-    </>
+    </div>
 
     // const Nav = () => {
     //   const[open,setOpen] = useState(false)

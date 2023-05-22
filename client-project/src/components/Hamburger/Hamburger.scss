@@ -1,66 +1,73 @@
-.navbar-toggler {
+.navbar-toggle {
   width: 35px;
-  // top: -6px;
-  // margin-left: 5px;
   position: relative;
   transition: 0.5s ease-in-out;
+  background: white;
 }
 
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-toggle,
+.navbar-toggle:focus,
+.navbar-toggle:active,
+.navbar-toggle-icon:focus {
   outline: none;
   box-shadow: none;
   border: 0;
+  position: relative;
 }
 
-.navbar-toggler span {
+.navbar-toggle span {
   margin: 0;
   padding: 0;
 }
 
-.toggler-icon {
+.toggle-icon {
+  display: block;
   position: absolute;
   height: 3px;
   width: 100%;
   background: #469daf;
   border-radius: 1px;
   opacity: 1;
+  left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
+  background-image: white;
 }
 
-.navbar-toggler .top-bar {
-  margin-top: 10px;
+.middle-bar {
+  filter: alpha(opacity=0);
+  margin-top: 0px;
+}
+
+.navbar-toggle .top-bar {
   transform: rotate(135deg);
 }
 
-.navbar-toggler .middle-bar {
+.navbar-toggle .middle-bar {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-.navbar-toggler .bottom-bar {
-  margin-top: 10px;
+.navbar-toggle .bottom-bar {
   transform: rotate(-135deg);
 }
 
-.navbar-toggler.collapsed .top-bar {
+.navbar-toggle.collapsed .top-bar {
   margin-top: -10px;
   transform: rotate(0deg);
 }
 
-.navbar-toggler.collapsed .middle-bar {
+.navbar-toggle.collapsed .middle-bar {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-.navbar-toggler.collapsed .bottom-bar {
+.navbar-toggle.collapsed .bottom-bar {
   margin-top: 10px;
   transform: rotate(0deg);
 }
 
-.nav-link {
-  margin-top: 15px;
+.nav-item {
+  opacity: 1;
+  margin-top: 10px;
 }
