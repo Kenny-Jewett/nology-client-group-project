@@ -27,10 +27,10 @@ const Cart = ({ open, closeModal }) => {
             </div>
             {cartList.map((obj) => (
               <CartItem productName={obj.productName}
-                imgUrl={obj.imgUrl}
-                price={obj.price}
+                imgUrl={"https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"}
+                price={obj.productPrice}
                 key={obj.productId}
-                itemQuantity={obj.itemQuantity}
+                itemQuantity={obj.productQuantity}
                 productId={obj.productId} />
 
             ))}
