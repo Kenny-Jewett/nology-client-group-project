@@ -10,9 +10,9 @@ const Card = ({ image, company, product, productType, description, price, quanti
   const handleBuyNow = (product) => {
     console.log(product);    
     dispatch(addOrder(product))
-    const {productId} = product
+    const {productId, productQuantity} = product
     console.log(productId);
-    const cartData = {"productId": productId, "cartQuantity": 2}
+    const cartData = {"productId": productId, "cartQuantity": productQuantity}
 
     postCart(cartData)
   }
