@@ -12,6 +12,7 @@ const Nav = ({ handleSearch }) => {
         <div className="d-inline-flex p-2 flex-row">
           <div class="d-inline-flex p-2 align-self-start">
             <a class="navbar-brand" href="#">Logo</a>
+            <p class="h5 d-inline-flex p-2 align-self-start">Cactus Electronics</p>
           </div>
           <div class="p-2 text-start">
             <Hamburger />
@@ -19,7 +20,7 @@ const Nav = ({ handleSearch }) => {
 
         </div>
         <div className="d-inline-flex p-2 flex-row">
-          <div class="d-inline-flex p-2 flex-row">
+          <div class="d-inline-flex p-2 flex-row align-self-end">
             <Search handleSearch={handleSearch} />
           </div>
           <div class="d-inline-flex p-2 flex-row align-self-end">
