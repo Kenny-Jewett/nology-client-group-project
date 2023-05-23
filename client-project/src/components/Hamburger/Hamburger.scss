@@ -1,0 +1,74 @@
+.navbar-toggle {
+  margin-top: 20px;
+  width: 35px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  background: white;
+}
+
+.navbar-toggle,
+.navbar-toggle:focus,
+.navbar-toggle:active,
+.navbar-toggle-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+}
+
+.navbar-toggle span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #469daf;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  background-image: white;
+}
+
+.middle-bar {
+  filter: alpha(opacity=0);
+  margin-top: 0px;
+}
+
+.navbar-toggle .top-bar {
+  transform: rotate(135deg);
+}
+
+.navbar-toggle .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggle .bottom-bar {
+  transform: rotate(-135deg);
+}
+
+.navbar-toggle.collapsed .top-bar {
+  margin-top: -10px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggle.collapsed .bottom-bar {
+  margin-top: 10px;
+  transform: rotate(0deg);
+}
+
+.nav-item {
+  opacity: 1;
+  margin-top: 10px;
+}

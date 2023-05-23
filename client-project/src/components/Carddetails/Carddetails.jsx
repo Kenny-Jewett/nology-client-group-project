@@ -1,55 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../Card/Card.jsx'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadItems } from '../../utils/inventorySlice'
 
 const Carddetails = () => {
+	
+	const dispatch = useDispatch();	
+	const productData = useSelector(store => store.inventory.items);
+	
+	const apiURL = "http://localhost:3070/api/products/"
+	
 
-  const productData = [{
-		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-    	companyName : "companyName",
-    	productName : "productName",
-    	productType : "productType",
-    	description : "description",
-    	price : "price",
-    	quantity : "quantity"    
-    },
-	{
-		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName",
-		productName : "productName",
-		productType : "productType",
-		description : "description",
-		price : "price",
-		quantity : "quantity"	
-	},
-	{
-		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName",
-		productName : "productName",
-		productType : "productType",
-		description : "description",
-		price : "price",
-		quantity : "quantity"	
-	},
-	{
-		image : "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png",
-		companyName : "companyName",
-		productName : "productName",
-		productType : "productType",
-		description : "description",
-		price : "price",
-		quantity : "quantity"	
-	}]
+	const inventory = async () => {
+		const url = apiURL;
+		const res =  await fetch(url);
+		const data = await res.json();
+		console.log(data);
+		dispatch(loadItems(data))	
+		
+	};
+
+	
+	useEffect(() => {inventory()}, []);
+
 
     const productList = productData?.map((product, id) =>
 		(<Card
-			image={product.image} 
-			company={product.companyName}
+			image={"https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"} 
+			company={product.productCompany}
 			product={product.productName}
 			productType={product.productType}
-			description={product.description}
-			price={product.price}
-			quantity={product.quantity}
-			key={id}
+			description={product.productDescription}
+			price={product.productPrice}
+			quantity={product.productQuantity}
+			key={id}			
+			entireProduct={product}
 		/>)
     
     )
