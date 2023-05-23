@@ -1,6 +1,7 @@
 import React from 'react'
 import Filtertemplate from '../Filtertemplate/Filtertemplate'
 import { useDispatch } from 'react-redux';
+import Stack from 'react-bootstrap/Stack';
 
 const Filter = () => {
 
@@ -38,11 +39,11 @@ const handleFilters = (filterButton) => {
 
   return (
   <div>
-    <div>
+    <Stack direction='horizontal' gap ={3}>
       <Filtertemplate name={"Highest Rated"} handleFunction = {handleFilters(highestRated)}/> 
       <Filtertemplate name={"Price: High-Low"} handleFunction = {handleFilters(highLow)}/>
-       <Filtertemplate name={"Price: Low-High"} handleFunction = {handleFilters(lowHigh)}/>
-    </div>
+      <Filtertemplate name={"Price: Low-High"} handleFunction = {handleFilters(lowHigh)}/>
+    </Stack>
   </div>
   )
 }
