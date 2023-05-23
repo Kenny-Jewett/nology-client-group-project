@@ -5,6 +5,8 @@ import { Provider } from "react-redux";
 import store from "./utils/store";
 import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Cart from "./components/Cart/Cart";
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+
 
 
 const App = () => {
@@ -18,11 +20,15 @@ const App = () => {
   };
 
   return (
+    <Router>
     <Provider store={store}>
-      <Nav handleSearch={handleSearch} />
-      <Landingpage />
-      <Cart />
+     <Nav handleSearch={handleSearch} />
+     <Routes>
+      <Route path="/" element = {<Landingpage />}></Route>
+      <Route path = "/cart" element = {<Cart />}></Route>
+    </Routes>
     </Provider>
+    </Router>
   );
 };
 

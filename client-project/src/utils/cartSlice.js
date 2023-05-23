@@ -30,7 +30,8 @@ const cartSlice = createSlice({
             imgUrl:'https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg',
             productType:'laptop',
             itemQuantity:1
-        }]
+        }],
+        subTotal:0
     },
     reducers:{
         addOrder:(state,action) =>{
