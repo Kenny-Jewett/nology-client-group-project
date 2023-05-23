@@ -1,7 +1,6 @@
 import React from 'react'
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
-import Cart from '../Cart/Cart';
 import "boxicons";
 
 

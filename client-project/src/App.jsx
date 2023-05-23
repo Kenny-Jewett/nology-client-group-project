@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./utils/store";
 import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Cart from "./components/Cart/Cart";
+import "boxicons";
 
 
 const App = () => {
