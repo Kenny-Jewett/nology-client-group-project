@@ -14,17 +14,23 @@ const CartItem = ({productName,imgUrl,price,itemQuantity,productId}) => {
   const dispatch = useDispatch();
   const deleteOrder = (productId) =>{
      dispatch(removeOrder(productId));
-     saveDeleteToDB();
+     saveDeleteToDB(productId);
   }
 
-  const saveDeleteToDB = () =>{
-    const response =  await fetch("http://localhost:3070/api/products/cart/:id",{
-      method:'DELETE',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify()
-    })
+  const saveDeleteToDB = async(productId) =>{
+
+    try {
+      const response =  await fetch(`http://localhost:3070/api/products/cart/${productId}`,{
+        method:'DELETE',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:null
+      })
+    } catch (error) {
+      console.log(error);
+    }
+   
   }
 
   const incrementBtn = () =>{

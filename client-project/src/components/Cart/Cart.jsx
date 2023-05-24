@@ -5,9 +5,7 @@ import './Cart.css';
 
 const Cart = ({ open, closeModal }) => {
   const cartList = useSelector(store => store.cart.items);
-  const closeButton = () => {
-    closeModal();
-  }
+ 
 
   return (
  <div>
