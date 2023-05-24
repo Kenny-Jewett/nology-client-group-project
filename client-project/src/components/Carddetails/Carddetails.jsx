@@ -15,8 +15,8 @@ const Carddetails = () => {
 		const url = apiURL;
 		const res =  await fetch(url);
 		const data = await res.json();
-		console.log(data);
 		dispatch(loadItems(data))	
+		console.log(data);
 		
 	};
 
