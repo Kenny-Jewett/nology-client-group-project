@@ -15,12 +15,6 @@ const cartSlice = createSlice({
             
             state.items = filteredItems;
         } 
-       /*  removeOrder:(state,action) =>{
-            return{
-                
-                items:[...state.items.filter(item => item.productId != action.payload.productId)]
-            }
-        } */
     }
 });
 
