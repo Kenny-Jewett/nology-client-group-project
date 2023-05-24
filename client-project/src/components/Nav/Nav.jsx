@@ -2,19 +2,12 @@ import React,{useState} from 'react'
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
 import Cart from '../Cart/Cart';
-import "boxicons";
+//import "boxicons";
 import {Link} from 'react-router-dom';
 
 
 const Nav = ({ handleSearch }) => {
-  const[open,setOpen] = useState(false)
-    const showModal = () =>{
-       setOpen(true);
-     }
-
-     const closeModal = () =>{
-        setOpen(false);
-       }
+ 
   return (
     <>
       <nav class="navbar navbar-light bg-light">
@@ -30,7 +23,7 @@ const Nav = ({ handleSearch }) => {
           </div>
           <div class="row justify-content-around">
             {/* <a href=""><box-icon name="cart-alt"></box-icon></a> */}
-            <Link  to = '/cart'onClick={showModal}>Cart</Link>
+            <Link  to = '/cart'>Cart</Link>
            
           </div>
         </div>
