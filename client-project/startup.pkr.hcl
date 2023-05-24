@@ -29,14 +29,6 @@ build {
     skip_clone = true
   }
 
-  provisioner "shell" {
-    inline = [
-      "cd nology-client-group-project.git",
-      "cd client-project.git"
-      # Additional build steps or commands within the repository
-    ]
-  }
-
   post-processor "docker-tag" {
     repository = "container-startup"
   }
