@@ -40,19 +40,21 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
     let temp = counter + 1;
     //console.log('temp inside incrementBtn', temp);
     setCounter(temp);
-    let tempSubTotal = cartSubTotal + parseInt(price);
-    dispatch(updateSubTotal({tempSubTotal}));
-    updateToDB(id,counter);
+    let tempSubTotal = parseInt(cartSubTotal + parseInt(price));
+    dispatch(updateSubTotal(tempSubTotal));
+    updateToDB(id,temp);
   }
  const updateToDB = async(id,counter) =>{
+  console.log('Entered updateDB');
     try {
-      const response =  await fetch(`http://localhost:3070/api/products/cart/${id}`,{
+        const response =  await fetch(`http://localhost:3070/api/products/cart/${id}`,{
         method:'PUT',
         headers:{
           'Content-Type':'application/json'
         },
-        body:JSON.stringify({cartQuantity:counter})
+        body:JSON.stringify({cartQuantity:counter}) 
       })
+      console.log(response);
       dispatch(updateCart({id,counter}))
     } catch (error) {
       console.log(error)
@@ -66,10 +68,10 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
     if(counter == 1)
     return;
     else
-    { counter = counter-1;
-    setCounter(counter);
+    { let temp = counter-1;
+    setCounter(temp);
     dispatch(updateSubTotal(cartSubTotal - parseInt(price)));
-
+    updateToDB(id,temp);
   }}
 
   
@@ -86,7 +88,7 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
     <div className='mt-2 cursor-pointer'><i onClick = {()=>deleteOrder(productId)} className="fa-solid fa-trash-can fa-lg"></i></div>
     </div>
 
-    <div className='col-sm-3'><p>${price * counter}</p></div>
+    <div className='col-sm-3'><p>${parseInt(price * counter).toFixed(2)}</p></div>
 </div>
   )
 }

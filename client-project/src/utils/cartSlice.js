@@ -28,7 +28,7 @@ const cartSlice = createSlice({
             
             return{
                 ...state,
-                subTotal:action.payload,
+                subTotal:action.payload.toFixed(2),
             }
         },
 
@@ -36,7 +36,10 @@ const cartSlice = createSlice({
         console.log(action.payload);
         //const findObject = state.items((item)=>)
         return{
-          ...state
+            ...state,
+                items: state.items.map((item)=>
+                      item.id===action.payload.id ? item.cartQuantity = action.payload.temp : null)
+            
         }
        }
       

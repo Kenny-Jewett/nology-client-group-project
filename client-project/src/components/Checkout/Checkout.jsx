@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Checkout = () => {
   return (
@@ -7,11 +8,11 @@ const Checkout = () => {
     <h5 class="card-title">Congrats!!! Order successful</h5>
     <p class="card-text">Thank you for your order</p>
     <p className='card-text'>Your order number is: {Math.floor(Math.random() * 10000) + 1}</p>
-    <a>Continue shopping</a>
+    <Link to = "/">Continue shopping</Link>
    </div>
   </div>
   )
 }
 
-export default Checkout
+export default Checkout;
 

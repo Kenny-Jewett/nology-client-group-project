@@ -6,6 +6,7 @@ import store from "./utils/store";
 import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Cart from "./components/Cart/Cart";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import Checkout from "./components/Checkout/Checkout";
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
      <Routes>
       <Route path="/" element = {<Landingpage />}></Route>
       <Route path = "/cart" element = {<Cart />}></Route>
+      <Route path = "/checkout" element = {<Checkout/>}></Route>
     </Routes>
     </Provider>
     </Router>

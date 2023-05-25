@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateSubTotal } from '../../utils/cartSlice';
 import './Cart.css';
 import { loadCartItems } from '../../utils/cartSlice';
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -48,6 +49,7 @@ const Cart = () => {
   return (
  <div>
     <h3 className='text-center m-3'>Your cart</h3>
+  <div className='mx-auto'>
     <div className='d-flex p-2'>
         <p className='col-sm-7 fw-bold'>Product</p>
         <p className='col-sm-3 fw-bold'>Price </p>
@@ -65,24 +67,13 @@ const Cart = () => {
            ))}
           </div>
            <div className='d-flex p-2 border'>
-              <p className='col-sm-10'>SubTotal</p>
-              <p className='col-sm-2'>{subTotal} </p>
+              <p className='col-sm-7'>SubTotal</p>
+              <p className='col-sm-3'>{subTotal} </p>
 
             </div>
-            <button className='btn btn-secondary btn-sm'>Checkout</button>
+           <div className='text-center mb-5 mt-5'><Link to = '/checkout' > <button className='btn btn-secondary btn-lg text-center'>Proceed to Checkout</button> </Link> </div>
           </div>
-        
-    
-  
-      
-
-          
-           
-      
-
-      
-  
-
+          </div>
   )
 }
 
