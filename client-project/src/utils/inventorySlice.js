@@ -12,10 +12,11 @@ const inventorySlice = createSlice({
                 items:action.payload
             }
         }
-     
     }
 });
 
+
 export const{loadItems} = inventorySlice.actions;
+
 
 export default inventorySlice.reducer;

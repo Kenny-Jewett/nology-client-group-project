@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { useEffect, useState } from "react";
 import Nav from "./components/Nav/Nav";
 import { Provider } from "react-redux";
@@ -7,7 +8,7 @@ import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Cart from "./components/Cart/Cart";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Checkout from "./components/Checkout/Checkout";
-
+import "boxicons";
 
 
 const App = () => {

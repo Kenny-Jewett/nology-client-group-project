@@ -3,17 +3,16 @@ import "./Hamburger.scss";
 
 const Hamburger = () => {
   return (
-    <>
-      <button class="navbar-toggler collapsed"
-        type="button"
-        data-bs-toggle="collapse"
+    <div class="">
+      <button class="navbar-toggle collapsed"
+        type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation">
-        <span class="toggler-icon top-bar"></span>
-        <span class="toggler-icon middle-bar"></span>
-        <span class="toggler-icon bottom-bar"></span>
+        <span class="toggle-icon top-bar"></span>
+        <span class="toggle-icon middle-bar"></span>
+        <span class="toggle-icon bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -34,7 +33,7 @@ const Hamburger = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   )
 }
 

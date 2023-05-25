@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Filtertemplate = () => {
+
+
+
+const Filtertemplate = ({name, handleFunction}) => {
+
+  
+
   return (
-    <div>Filtertemplate</div>
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="button" onClick={handleFunction}>{name}</button>
+    </div>
   )
 }
 
