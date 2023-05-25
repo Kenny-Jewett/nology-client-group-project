@@ -20,9 +20,7 @@ const Carddetails = () => {
 		
 	};
 
-	
 	useEffect(() => {inventory()}, []);
-
 
     const productList = productData?.map((product, id) =>
 		(<Card

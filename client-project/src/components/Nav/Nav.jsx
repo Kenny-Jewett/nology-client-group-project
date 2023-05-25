@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
+import Cart from '../Cart/Cart';
+import {Link} from 'react-router-dom';
 import "boxicons";
 
 
+
 const Nav = ({ handleSearch }) => {
+ 
   return (
     <div class="container-fluid">
       <nav class="navbar navbar-light bg-white">
@@ -22,8 +26,10 @@ const Nav = ({ handleSearch }) => {
           <div class="d-inline-flex p-2 flex-row align-self-end">
             <Search handleSearch={handleSearch} />
           </div>
+
           <div class="d-inline-flex p-2 flex-row align-self-end">
-            <a href=""><box-icon name="cart-alt"></box-icon></a>
+            <Link  to = '/cart'><box-icon name="cart-alt"></box-icon></Link>
+           
           </div>
         </div>
       </nav >

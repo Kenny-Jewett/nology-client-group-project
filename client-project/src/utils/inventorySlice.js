@@ -11,13 +11,12 @@ const inventorySlice = createSlice({
                 ...state,
                 items:action.payload
             }
-        },
-        removeItem:(state,action) =>{
-            state.items.pop();
         }
     }
 });
 
-export const{loadItems,removeItem} = inventorySlice.actions;
+
+export const{loadItems} = inventorySlice.actions;
+
 
 export default inventorySlice.reducer;
