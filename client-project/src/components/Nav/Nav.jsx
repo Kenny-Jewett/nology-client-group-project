@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import "./Nav.scss"
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
 import { Link } from 'react-router-dom';
+import CactusElectronics from "./images/CactusElectronics.png";
 import "boxicons";
 
 
@@ -13,8 +15,8 @@ const Nav = ({ handleSearch }) => {
       <nav class="navbar navbar-light bg-white">
         <div className="d-inline-flex p-2 flex-row">
           <div class="d-inline-flex p-2 align-self-start">
-            <Link to='/'><a class="navbar-brand">Logo</a></Link>
-            <p class="h5 d-inline-flex p-2 align-self-start">Cactus Electronics</p>
+            <Link to='/'><img src={CactusElectronics} alt="Logo"></img></Link>
+            <p class="name h5 d-inline-flex p-2 align-self-start">Cactus Electronics</p>
           </div>
           <div class="p-2 text-start">
             <Hamburger />
