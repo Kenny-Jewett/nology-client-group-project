@@ -29,6 +29,7 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
         },
         body:null
       })
+      console.log(response);
       dispatch(removeOrder(productId));
     } catch (error) {
       console.log(error);

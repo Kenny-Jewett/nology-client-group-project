@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Card from '../Card/Card.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { loadItems } from '../../utils/inventorySlice'
