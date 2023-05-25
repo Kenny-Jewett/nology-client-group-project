@@ -1,6 +1,11 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addOrder } from '../../utils/cartSlice';
 
 const Card = ({ image, company, product, productType, description, price, entireProduct }) => {  
+  const dispatch = useDispatch();
+  const cartSlice = useSelector(store => store.cart.items)
+
 
   const handleBuyNow = (product) => {        
     const {productId} = product    
@@ -8,20 +13,27 @@ const Card = ({ image, company, product, productType, description, price, entire
     postCart(cartData, product)    
   }
 
-  const postCart = async (data) => {
-    try {
-      const response =  await fetch("http://localhost:3070/api/products/cart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),        
-      });
-      const result = await response.json();     
-      console.log("Success:", result);      
-    }catch (error) {
-      console.error(error);
-    }    
+  const postCart = async (data, product) => {
+    if (cartSlice.find((e) => e.productId === product.productId)) {     
+      
+      return
+    } else {      
+      try {
+        const response =  await fetch("http://localhost:3070/api/products/cart", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),        
+        });
+        const result = await response.json();     
+        console.log("Success:", result); 
+        dispatch(addOrder(product))
+        console.log(cartSlice)       
+      }catch (error) {
+        console.error(error);
+      }
+    }
   };
 
   
