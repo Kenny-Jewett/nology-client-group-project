@@ -3,7 +3,7 @@ import "./Hamburger.scss";
 
 const Hamburger = () => {
   return (
-    <div class="">
+    <div class="container">
       <button class="navbar-toggle collapsed"
         type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav"

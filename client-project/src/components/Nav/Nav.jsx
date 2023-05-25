@@ -1,20 +1,19 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
-import Cart from '../Cart/Cart';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "boxicons";
 
 
 
 const Nav = ({ handleSearch }) => {
- 
+
   return (
     <div class="container-fluid">
       <nav class="navbar navbar-light bg-white">
         <div className="d-inline-flex p-2 flex-row">
           <div class="d-inline-flex p-2 align-self-start">
-            <a class="navbar-brand" href="#">Logo</a>
+            <Link to='/'><a class="navbar-brand">Logo</a></Link>
             <p class="h5 d-inline-flex p-2 align-self-start">Cactus Electronics</p>
           </div>
           <div class="p-2 text-start">
@@ -28,8 +27,8 @@ const Nav = ({ handleSearch }) => {
           </div>
 
           <div class="d-inline-flex p-2 flex-row align-self-end">
-            <Link  to = '/cart'><box-icon name="cart-alt"></box-icon></Link>
-           
+            <Link to='/cart'><box-icon name="cart-alt"></box-icon></Link>
+
           </div>
         </div>
       </nav >
