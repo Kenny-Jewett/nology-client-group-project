@@ -36,7 +36,7 @@ const Cart = () => {
 
   const calculateSubTotal = () =>{
     let tempSubTotal = 0;
-   cartList.map((item)=>{
+   cartList?.map((item)=>{
     console.log("Before",tempSubTotal);
     console.log(item.cartQuantity,item.cartPrice);
      tempSubTotal= tempSubTotal+(parseInt(item.cartQuantity) * parseFloat(item.cartPrice));
@@ -56,7 +56,7 @@ const Cart = () => {
     </div>
         
         <div className='d-flex flex-column'>
-        {cartList.map((obj) => (
+        {cartList?.map((obj) => (
               <CartItem productName={obj.cartName}
                 imgUrl={obj.cartImage}
                 price={obj.cartPrice}
