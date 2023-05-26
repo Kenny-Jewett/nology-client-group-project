@@ -11,9 +11,9 @@ const Products = () => {
     let apiURL;
 
     const productLaptops = useSelector(store => store.inventory.laptops);
-    const productHeadphones = useSelector(store => store.inventory.headphones);
-    const productSmartwatches = useSelector(store => store.inventory.smartwatches);
-    const productSpeakers = useSelector(store => store.inventory.speakers);
+    // const productHeadphones = useSelector(store => store.inventory.headphones);
+    // const productSmartwatches = useSelector(store => store.inventory.smartwatches);
+    // const productSpeakers = useSelector(store => store.inventory.speakers);
     const dispatch = useDispatch()
 
     switch (userSelection) {
