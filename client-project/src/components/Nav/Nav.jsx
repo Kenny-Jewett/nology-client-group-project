@@ -14,7 +14,7 @@ const Nav = ({ handleSearch }) => {
     <div class="container-fluid">
       <nav class="navbar navbar-light bg-white">
         <div className="d-inline-flex p-2 flex-row">
-          <div class="d-inline-flex p-2 align-self-start">
+          <div class="logo d-inline-flex p-2 align-self-start">
             <Link to='/'><img src={CactusElectronics} alt="Logo"></img></Link>
             <p class="name h5 d-inline-flex p-2 align-self-start">Cactus Electronics</p>
           </div>
