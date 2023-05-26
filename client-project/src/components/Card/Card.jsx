@@ -19,7 +19,7 @@ const Card = ({ image, company, product, productType, description, price, entire
       return
     } else {      
       try {
-        const response =  await fetch("http://3.22.75.219:3070/api/products/cart", {
+        const response =  await fetch("http://localhost:3070/api/products/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
