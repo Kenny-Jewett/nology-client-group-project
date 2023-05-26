@@ -12,11 +12,13 @@ const Carddetails = () => {
 	// const productSmartwatches = useSelector(store => store.inventory.smartwatches);
 	// const productSpeakers = useSelector(store => store.inventory.speakers);
 
+
 	const apiURL = "http://localhost:3070/api/products/"
 	// const apiURLLaptops = "http://localhost:3070/api/products/laptops"
 	// const apiURLHeadphones = "http://localhost:3070/api/products/headphones"
 	// const apiURLSmartwatches = "http://localhost:3070/api/products/smartwatches"
 	// const apiURLSpeakers = "http://localhost:3070/api/products/speakers"
+
 
 	const inventory = async () => {
 		const url = apiURL;
