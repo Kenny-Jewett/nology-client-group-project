@@ -1,10 +1,21 @@
 import React from 'react';
 import "./Hamburger.scss";
+import { useDispatch } from "react-redux";
+import { updateUserSelection } from '../../utils/inventorySlice';
+import { Link } from 'react-router-dom';
 
 const Hamburger = () => {
+
+  const dispatch = useDispatch();
+
+  const handlerBtn = (productType) => {
+    console.log(productType)
+    dispatch(updateUserSelection(productType));
+  }
+
   return (
     <div class="container">
-      <button class="navbar-toggle collapsed"
+      <button class="onClick={() => dispatch({type: 'reset', payload:laptops navbar-toggle collapsed"
         type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
@@ -16,20 +27,17 @@ const Hamburger = () => {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          {/* <li class="nav-item"> */}
-          {/* <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li> */}
           <li class="nav-item">
-            <a class="nav-link" href="#">Laptops</a>
+            <Link to="/products"><a class="nav-link" onClick={() => handlerBtn("laptops")}>Laptops</a></Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Headphones</a>
+            <Link to="/products"><a class="nav-link" onClick={() => handlerBtn("headphones")}>Headphones</a></Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Smart Watches</a>
+            <Link to="/products"><a class="nav-link" onClick={() => handlerBtn("smartwatches")}>Smart Watches</a></Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Speakers</a>
+            <Link to="/products"><a class="nav-link" onClick={() => handlerBtn("speakers")}>Speakers</a></Link>
           </li>
         </ul>
       </div>

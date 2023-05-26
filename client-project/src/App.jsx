@@ -12,6 +12,7 @@ import Products from "./components/products/Products";
 import "boxicons";
 
 
+
 const App = () => {
   const [filterBySearch, setFilterBySearch] = useState(false);
 
