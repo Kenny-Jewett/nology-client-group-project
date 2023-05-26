@@ -3,7 +3,7 @@ import CartItem from '../CartItem/CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateSubTotal } from '../../utils/cartSlice';
 import './Cart.css';
-import { loadCartItems } from '../../utils/cartSlice';
+import { loadCartItems,updateLoadingStatus } from '../../utils/cartSlice';
 import { Link } from 'react-router-dom';
 
 
@@ -17,7 +17,7 @@ const Cart = () => {
   useEffect(() => {
     console.log('Entered useEffect');
     loadCart();
-  }, []);
+  }, [subTotal]);
 
   useEffect(() => {
     calculateSubTotal();
@@ -25,10 +25,11 @@ const Cart = () => {
 
   const loadCart = async () => {
     try {
-      let response = await fetch("http://3.22.75.219:3070/api/products/cart");
+      let response = await fetch("http://localhost:3070/api/products/cart");
       let result = await response.json();
       console.log(result);
       dispatch(loadCartItems(result));
+      dispatch(updateLoadingStatus());
     } catch (error) {
       console.log(error);
     }
@@ -37,10 +38,10 @@ const Cart = () => {
   const calculateSubTotal = () => {
     let tempSubTotal = 0;
     cartList.map((item) => {
-      console.log("Before", tempSubTotal);
-      console.log(item.cartQuantity, item.cartPrice);
+      //console.log("Before", tempSubTotal);
+      //console.log(item.cartQuantity, item.cartPrice);
       tempSubTotal = tempSubTotal + (parseInt(item.cartQuantity) * parseFloat(item.cartPrice));
-      console.log("After", tempSubTotal);
+      //console.log("After", tempSubTotal);
     })
     console.log("After map method", tempSubTotal);
     dispatch(updateSubTotal(tempSubTotal));
@@ -63,15 +64,16 @@ const Cart = () => {
               key={obj.productId}
               cartQuantity={obj.cartQuantity}
               productId={obj.productId}
+              id={obj.id}
             />
           ))}
         </div>
         <div className='d-flex p-2 border'>
           <p className='col-sm-7'>SubTotal</p>
-          <p className='col-sm-3'>{subTotal} </p>
+          <p className='col-sm-3'>{subTotal.toFixed(2)} </p>
 
         </div>
-        <div className='text-center mb-5 mt-5'><Link to='/checkout' > <button className='btn btn-secondary btn-lg text-center'>Proceed to Checkout</button> </Link> </div>
+        <div className='text-center mb-5 mt-5'><Link to={cartList.length==0 ? '#':'/checkout'} > <button className='btn btn-secondary btn-lg text-center' disabled>Proceed to Checkout</button> </Link> </div>
       </div>
     </div>
   )

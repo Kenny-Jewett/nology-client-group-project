@@ -15,8 +15,22 @@ const cartSlice = createSlice({
             loading:false
           }
         },
-        addOrder:(state,action) =>{
-            state.items.push(action.payload)
+        updateLoadingStatus:(state,action)=>{
+            return{
+              ...state,
+              loading:false
+            }
+          },
+
+
+          addOrder:(state,action) =>{
+            console.log("action.payload from addOrder",action.payload);
+            return{
+                ...state,
+                items:[...state.items,action.payload]
+                
+            }
+            
         },
          removeOrder:(state,action) =>{
           const filteredItems = state.items.filter((item)=>item.productId !== action.payload
@@ -28,7 +42,7 @@ const cartSlice = createSlice({
             
             return{
                 ...state,
-                subTotal:action.payload.toFixed(2),
+                subTotal:action.payload
             }
         },
 
@@ -45,6 +59,6 @@ const cartSlice = createSlice({
     }
 });
 
-export const{addOrder,removeOrder,updateSubTotal,loadCartItems,updateCart} = cartSlice.actions;
+export const{addOrder,removeOrder,updateSubTotal,loadCartItems,updateCart,updateLoadingStatus} = cartSlice.actions;
 
 export default cartSlice.reducer;
