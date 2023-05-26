@@ -3,26 +3,26 @@ import { useDispatch } from 'react-redux';
 import { removeOrder, updateSubTotal,updateCart } from '../../utils/cartSlice';
 import { useSelector} from 'react-redux';
 import './CartItem.css'
-import inventorySlice from '../../utils/inventorySlice';
 
-const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
+const CartItem = ({productName,imgUrl,price,cartQuantity,productId,id}) => {
   
   let [counter,setCounter] = useState(cartQuantity);
 
-  const inventoryList = useSelector(store => store.inventory.items);
+  
   const cartSubTotal = useSelector(store => store.cart.subTotal);
   
 
   const dispatch = useDispatch();
-  const deleteOrder = (productId) =>{
-    
-     saveDeleteToDB(productId);
+  const deleteOrder = (id) =>{
+    let temp = cartSubTotal - (price * cartQuantity)  ;
+    dispatch(updateSubTotal(temp));
+     saveDeleteToDB(id);
   }
 
-  const saveDeleteToDB = async(productId) =>{
+  const saveDeleteToDB = async(id) =>{
 
     try {
-      const response =  await fetch(`http://3.22.75.219:3070/api/products/cart/${productId}`,{
+      const response =  await fetch(`http://localhost:3070/api/products/cart/${id}`,{
         method:'DELETE',
         headers:{
           'Content-Type':'application/json'
@@ -84,12 +84,12 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
     <div className=' col-sm-4 d-flex flex-column text-center'>
     <div className=''><h6>{productName}</h6></div>
     {/* incre/decre button row flex */}
-    <div className='d-flex justify-content-center'><button className='btn btn-light' onClick={()=>decrementBtn(price,productId)}>-</button> <p className="text-center inline-block">{counter}</p> <button onClick = {()=>incrementBtn(price,productId)} className='btn btn-light'>+</button></div>
+    <div className='d-flex justify-content-center'><button className='btn btn-light' onClick={()=>decrementBtn(price,id)}>-</button> <p className="text-center inline-block">{counter}</p> <button onClick = {()=>incrementBtn(price,id)} className='btn btn-light'>+</button></div>
 
-    <div className='mt-2 cursor-pointer'><i onClick = {()=>deleteOrder(productId)} className="fa-solid fa-trash-can fa-lg"></i></div>
+    <div className='mt-2 cursor-pointer'><i onClick = {()=>deleteOrder(id)} className="fa-solid fa-trash-can fa-lg"></i></div>
     </div>
 
-    <div className='col-sm-3'><p>${parseInt(price * counter).toFixed(2)}</p></div>
+    <div className='col-sm-3'><p>${(price * counter).toFixed(2)}</p></div>
 </div>
   )
 }

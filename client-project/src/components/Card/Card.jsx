@@ -28,8 +28,15 @@ const Card = ({ image, company, product, productType, description, price, entire
         });
         const result = await response.json();     
         console.log("Success:", result); 
-        dispatch(addOrder(product))
-        console.log(cartSlice)       
+        const temp = {
+          cartImage:product.productImage,
+          cartName:product.productCompany,
+          cartPrice:product.productPrice,
+          cartQuantity:1,
+          productId:product.productId,
+        } 
+        dispatch(addOrder(temp))
+               
       }catch (error) {
         console.error(error);
       }
