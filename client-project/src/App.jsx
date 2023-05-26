@@ -8,6 +8,7 @@ import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Checkout from "./components/Checkout/Checkout";
+import Products from "./components/products/Products";
 import "boxicons";
 
 
@@ -27,6 +28,7 @@ const App = () => {
         <Nav handleSearch={handleSearch} />
         <Routes>
           <Route path="/" element={<Landingpage />}></Route>
+          <Route path="/products" element={<Products />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
         </Routes>
