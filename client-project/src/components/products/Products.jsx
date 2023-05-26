@@ -6,10 +6,10 @@ import Card from '../Card/Card'
 
 const Products = () => {
 
-    const apiURLLaptops = "http://localhost:3070/api/products/laptops"
-    const apiURLSmartwatches = "http://localhost:3070/api/products/smartwatches"
-    const apiURLHeadphones = "http://localhost:3070/api/products/headphones"
-    const apiURLSpeakers = "http://localhost:3070/api/products/speakers"
+    const apiURLLaptops = "http://3.22.75.219:3070/api/products/laptops"
+    const apiURLSmartwatches = "http://3.22.75.219:3070/api/products/smartwatches"
+    const apiURLHeadphones = "http://3.22.75.219:3070/api/products/headphones"
+    const apiURLSpeakers = "http://3.22.75.219:3070/api/products/speakers"
     const productLaptops = useSelector(store => store.inventory.laptops);
     const dispatch = useDispatch()
 

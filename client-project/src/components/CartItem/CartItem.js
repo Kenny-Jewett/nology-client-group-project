@@ -22,7 +22,7 @@ const CartItem = ({productName,imgUrl,price,cartQuantity,productId}) => {
   const saveDeleteToDB = async(productId) =>{
 
     try {
-      const response =  await fetch(`http://localhost:3070/api/products/cart/${productId}`,{
+      const response =  await fetch(`http://3.22.75.219:3070/api/products/cart/${productId}`,{
         method:'DELETE',
         headers:{
           'Content-Type':'application/json'
