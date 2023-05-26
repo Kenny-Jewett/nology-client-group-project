@@ -12,8 +12,8 @@ const Carddetails = () => {
 	const productSmartWatches = useSelector(store => store.inventory.smartwatches);
 	const productSpeakers = useSelector(store => store.inventory.speakers);
 
-	const apiURL = "http://localhost:3070/api/products/"
-	const apiURLLaptops = "http://localhost:3070/api/products/laptops"
+	const apiURL = "http://3.22.75.219:3070/api/products/"
+	const apiURLLaptops = "http://3.22.75.219:3070/api/products/laptops"
 
 	const inventory = async () => {
 		const url = apiURL;

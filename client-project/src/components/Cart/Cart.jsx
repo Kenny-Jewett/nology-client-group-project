@@ -25,7 +25,7 @@ const Cart = () => {
 
   const loadCart = async () => {
     try {
-      let response = await fetch("http://localhost:3070/api/products/cart");
+      let response = await fetch("http://3.22.75.219:3070/api/products/cart");
       let result = await response.json();
       console.log(result);
       dispatch(loadCartItems(result));
