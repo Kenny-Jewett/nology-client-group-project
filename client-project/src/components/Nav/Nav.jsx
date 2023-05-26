@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Nav.scss"
 import Hamburger from "../Hamburger/Hamburger";
 import Search from '../Search/Search';
@@ -30,7 +30,6 @@ const Nav = ({ handleSearch }) => {
 
           <div class="d-inline-flex p-2 flex-row align-self-end">
             <Link to='/cart'><box-icon name="cart-alt"></box-icon></Link>
-
           </div>
         </div>
       </nav >
